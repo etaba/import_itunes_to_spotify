@@ -8,6 +8,10 @@ Store your spotify credentials as environment variables
 
     export SPOTIPY_CLIENT_ID=<yourClientId>
     export SPOTIPY_CLIENT_SECRET=<yourClientSecret>
+    
+Save your itunes xml file as `itunes.xml` in the top level directory
+This xml file can be here: (for Macs) ~/Music/Itunes/iTunes Music Library.xml
+If its not there you can try creating the xml from itunes: File > Library > Export Library...
 
 If you only want to import some of the itunes libraries, list them in `SELECTED_PLAYLISTS`. Otherwise leave it empty and all itunes playlists will be imported.
 
