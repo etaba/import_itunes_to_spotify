@@ -1,16 +1,22 @@
-# Simple demo for spotipy OAuth workflow
+# Bottle app do import your Itunes playlists into Spotify
 
 Install dependencies with
 
     $ pip install -r requirements.txt
 
-edit spotipy_oauth_demo.py to enter your Spotify app credentials
+Store your spotify credentials as environment variables
 
-    SPOTIPY_CLIENT_ID = 'your_client_id'
-    SPOTIPY_CLIENT_SECRET = 'your_client_secret'
+    export SPOTIPY_CLIENT_ID=<yourClientId>
+    export SPOTIPY_CLIENT_SECRET=<yourClientSecret>
 
-start server with
+If you only want to import some of the itunes libraries, list them in `SELECTED_PLAYLISTS`. Otherwise leave it empty and all itunes playlists will be imported.
 
-    $ python spotipy_oauth_demo.py 
+Start server with
+
+    $ python import_itunes.py 
+
+Clicking the "Dry run" link will search spotify for all the itunes songs and report at the end which songs could not be found.
+
+Clicking the "Import" link will import the playlists and report which songs could not be found.
 
 open http://localhost:8080 in a browser
